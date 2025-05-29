@@ -42,7 +42,7 @@ export default function DigitalPlannerLanding() {
       content:
         "This digital planner has completely transformed how I organize my creative projects. The aesthetic is so beautiful!",
       rating: 5,
-      avatar: "/placeholder.svg?height=60&width=60",
+      avatar: "https://testingbot.com/free-online-tools/random-avatar/200?img=3",
     },
     {
       name: "Emily Chen",
@@ -50,14 +50,14 @@ export default function DigitalPlannerLanding() {
       content:
         "I love the handwritten feel combined with digital convenience. Perfect for my study schedule and goals!",
       rating: 5,
-      avatar: "/placeholder.svg?height=60&width=60",
+      avatar: "https://testingbot.com/free-online-tools/random-avatar/200?img=4",
     },
     {
       name: "Maria Rodriguez",
       role: "Small Business Owner",
       content: "The warm colors and cozy design make planning feel like self-care. Highly recommend!",
       rating: 5,
-      avatar: "/placeholder.svg?height=60&width=60",
+      avatar: "https://testingbot.com/free-online-tools/random-avatar/200?img=5",
     },
   ]
 
@@ -214,7 +214,7 @@ export default function DigitalPlannerLanding() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="py-20 lg:py-32"
+        className="py-16 lg:mx-12 lg:py-12"
       >
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -270,10 +270,10 @@ export default function DigitalPlannerLanding() {
             >
               <div className="relative z-10">
                 <Image
-                  src="/placeholder.svg?height=600&width=500"
+                  src="https://th.bing.com/th/id/OIP.TT5C6YPoYr7ctWG1YydCOAHaE8?rs=1&pid=ImgDetMain"
                   alt="Digital Planner Preview"
-                  width={500}
-                  height={600}
+                  width={600}
+                  height={800}
                   className="rounded-2xl shadow-2xl"
                 />
               </div>
@@ -289,17 +289,17 @@ export default function DigitalPlannerLanding() {
         initial="initial"
         whileInView="whileInView"
         variants={staggerContainer}
-        className="py-20 bg-white/50 dark:bg-gray-900/50"
+        className="py-20 bg-white/50 lg:mx-12 dark:bg-gray-900/50"
       >
         <div className="container mx-auto px-4">
           <motion.div variants={fadeInUp} className="text-center mb-16">
             <h2
-              className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+              className="text-4xl lg:text-5xl font-semibold bg-clip-text text-transparent bg-gradient-to-br from-orange-600 to-yellow-400 dark:text-gray-100 mb-4"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Everything You Need to
               <span
-                className="block text-orange-600 dark:text-orange-400"
+                className="block mt-3 text-orange-600 border-b-2 border-orange-600 w-fit mb-2 mx-auto dark:text-orange-400"
                 style={{ fontFamily: "Dancing Script, cursive" }}
               >
                 Stay Organized
@@ -344,10 +344,10 @@ export default function DigitalPlannerLanding() {
               },
             ].map((feature, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="h-full bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-950 dark:to-yellow-950 border-orange-200 dark:border-orange-800 hover:shadow-lg transition-shadow duration-300">
+                <Card className="h-full bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-950 dark:to-yellow-950 border-orange-200 dark:border-orange-800  hover:shadow-lg transition-shadow duration-300">
                   <CardHeader>
                     <feature.icon className="h-12 w-12 text-orange-600 dark:text-orange-400 mb-4" />
-                    <CardTitle className="text-xl text-gray-800 dark:text-gray-100">{feature.title}</CardTitle>
+                    <CardTitle className="text-xl bg-clip-text text-transparent bg-gradient-to-br from-orange-600 to-yellow-400 border-b border-orange-600 mb-1 mr-24 dark:text-gray-100">{feature.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="text-gray-600 dark:text-gray-300 text-base">
@@ -366,12 +366,12 @@ export default function DigitalPlannerLanding() {
         <div className="container mx-auto px-4">
           <motion.div variants={fadeInUp} className="text-center mb-16">
             <h2
-              className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+              className="text-4xl lg:text-5xl font-semibold bg-clip-text text-transparent bg-gradient-to-br from-orange-600 to-yellow-400 dark:text-gray-100 mb-4"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Sneak Peek
               <span
-                className="block text-orange-600 dark:text-orange-400"
+                className="block text-orange-600 border-b-2 border-orange-600 w-fit mb-2 mx-auto mt-2 dark:text-orange-400"
                 style={{ fontFamily: "Dancing Script, cursive" }}
               >
                 Inside Your Planner
@@ -379,16 +379,17 @@ export default function DigitalPlannerLanding() {
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map((item, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 mx-12">
+            {/* mapping shuffled images */}
+            {([6, 7, 8, 9, 10, 3]).map((item, index) => (
               <motion.div key={item} variants={fadeInUp} whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
-                <div className="relative group cursor-pointer">
+                <div className="relative group cursor-pointer border-2 border-orange-500 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src={`/placeholder.svg?height=400&width=300&text=Preview ${item}`}
+                    src={`https://testingbot.com/free-online-tools/random-avatar/200?img=${item}`}
                     alt={`Planner Preview ${item}`}
-                    width={300}
-                    height={400}
-                    className="rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                    width={750}
+                    height={500}
+                    className="rounded-xl  shadow-lg group-hover:shadow-xl transition-shadow duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <p className="text-white p-4 font-medium">Preview {item}</p>
@@ -411,12 +412,12 @@ export default function DigitalPlannerLanding() {
         <div className="container mx-auto px-4">
           <motion.div variants={fadeInUp} className="text-center mb-16">
             <h2
-              className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+              className="text-4xl lg:text-5xl font-semibold bg-clip-text text-transparent bg-gradient-to-br from-orange-600 to-yellow-400 dark:text-gray-100 mb-4"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               What Our
               <span
-                className="block text-orange-600 dark:text-orange-400"
+                className="block text-orange-600 border-b-2 border-orange-600 w-fit mb-2 mx-auto mt-2 dark:text-orange-400"
                 style={{ fontFamily: "Dancing Script, cursive" }}
               >
                 Happy Planners Say
@@ -471,12 +472,12 @@ export default function DigitalPlannerLanding() {
         <div className="container mx-auto px-4">
           <motion.div variants={fadeInUp} className="text-center mb-16">
             <h2
-              className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+              className="text-4xl lg:text-5xl font-semibold bg-clip-text text-transparent bg-gradient-to-br from-orange-600 to-yellow-400 dark:text-gray-100 mb-4"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Choose Your
               <span
-                className="block text-orange-600 dark:text-orange-400"
+                className="block text-orange-600 border-b-2 border-orange-600 w-fit mb-2 mx-auto mt-2 dark:text-orange-400"
                 style={{ fontFamily: "Dancing Script, cursive" }}
               >
                 Perfect Plan
@@ -543,11 +544,11 @@ export default function DigitalPlannerLanding() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl lg:text-5xl font-bold text-white mb-6"
+            className="text-4xl lg:text-5xl font-semibold text-white mb-6"
             style={{ fontFamily: "Poppins, sans-serif" }}
           >
             Ready to Transform Your
-            <span className="block" style={{ fontFamily: "Dancing Script, cursive" }}>
+            <span className="block border-b-2 border-white mb-1 mt-3 w-fit mx-auto" style={{ fontFamily: "Dancing Script, cursive" }}>
               Planning Experience?
             </span>
           </motion.h2>
